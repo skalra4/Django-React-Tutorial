@@ -95,8 +95,8 @@ class CreateRoomPage extends Component {
 
   renderCreateButtons() {
     return (
-      <Grid container spacing={1}>
-        <Grid item xs={12} align="center">
+      <Grid container spacing={1} alignItems="center">
+        <Grid item xs={12}>
           <Button
             color="primary"
             variant="contained"
@@ -105,7 +105,7 @@ class CreateRoomPage extends Component {
             Create A Room
           </Button>
         </Grid>
-        <Grid item xs={12} align="center">
+        <Grid item xs={12}>
           <Button color="secondary" variant="contained" to="/" component={Link}>
             Back
           </Button>
@@ -116,7 +116,7 @@ class CreateRoomPage extends Component {
 
   renderUpdateButtons() {
     return (
-      <Grid item xs={12} align="center">
+      <Grid item xs={12}>
         <Button
           color="primary"
           variant="contained"
@@ -132,7 +132,7 @@ class CreateRoomPage extends Component {
     const title = this.props.update ? "Update Room" : "Create A Room";
     return (
       <Grid container spacing={1}>
-        <Grid item xs={12} align="center">
+        <Grid item xs={12}>
           <Collapse
             in={this.state.errorMsg != "" || this.state.successMsg != ""}
           >
@@ -165,7 +165,7 @@ class CreateRoomPage extends Component {
             {title}
           </Typography>
         </Grid>
-        <Grid item xs={12} align="center">
+        <Grid item xs={12}>
           <FormControl component="fieldset">
             <FormHelperText component="div">
               Guest Control of Playback State
@@ -190,7 +190,7 @@ class CreateRoomPage extends Component {
             </RadioGroup>
           </FormControl>
         </Grid>
-        <Grid item xs={12} align="center">
+        <Grid item xs={12}>
           <FormControl>
             <TextField
               required={true}
